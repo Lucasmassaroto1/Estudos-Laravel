@@ -9,7 +9,7 @@ use App\Models\Curso;
 class CursoController extends Controller
 {
     public function index(){
-        $registros = Curso::all();
+        $registros = Curso::paginate(3);
         return view('admin.cursos.index', compact('registros'));
     }
 
